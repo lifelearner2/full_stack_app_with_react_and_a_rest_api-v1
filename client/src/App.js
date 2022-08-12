@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
 //import logo from './logo.svg';
 //import './App.css';
+//import '../styles/global.css';
+
 import Courses from './Components/Courses';
 
  import {
