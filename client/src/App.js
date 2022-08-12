@@ -1,5 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Courses from './Components/Courses';
+
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+//  render() {
+//   return (
+//     <h1> { "hello"}</h1>
+//       )
+//     };
+
+   
+  
+
 
 function App() {
   return (

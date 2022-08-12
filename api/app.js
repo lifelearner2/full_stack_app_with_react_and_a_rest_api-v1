@@ -4,6 +4,10 @@ const Sequelize = require('./models/index.js').sequelize;
 const routes = require('./routes.js');
 const cors = require('cors');
 
+// create the Express app
+const app = express();
+app.use(express.json());
+
 // Enable CORS requests
 app.use(cors()); 
 
@@ -11,9 +15,7 @@ app.use(cors());
 // variable to enable global error logging
 const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'true';
 
-// create the Express app
-const app = express();
-app.use(express.json());
+
 
 // setup a friendly greeting for the root route
 app.get('/', (req, res) => {
