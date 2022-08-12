@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
-//import logo from './logo.svg';
-//import './App.css';
-//import '../styles/global.css';
+
 import Header from './Components/Header';
 import Courses from './Components/Courses';
 
@@ -36,7 +34,6 @@ function App() {
 //<button onClick={clicked()}>Sign Up</button>
 // <button type="sign up" className="sign-up.html"></button>
 
-// fetchData = (useState) => {
-//   fetch ()
+//not fetching in app.js - only in certain components. App.js is for routes and errors and maybe authentication and validation
 
 export default App;

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 //import App from './app.js';
 
-//import './App.css';
+
 
 function Courses() {  
   const [ courses, setCourses ] = useState(0);
@@ -19,7 +19,7 @@ function Courses() {
      console.log("hello from useEffect");
    }, []); // pass an empty array to run useEffect once
 
-   //this button is going to the /3001 page but I don't see it consistently, it just pops up at random times
+
    //render() {
      return(
       <div className="wrap main--grid">
@@ -27,7 +27,14 @@ function Courses() {
           <h2 className="course--label">Course</h2>
           <h3 className="course--title">Build a Basic Bookcase</h3>
       </a>
-   
+      <a className="course--module course--link" href="course-detail.html">
+                    <h2 className="course--label">Course</h2>
+                    <h3 className="course--title">Learn How to Program</h3>
+                </a>
+                <a className="course--module course--link" href="course-detail.html">
+                    <h2 className="course--label">Course</h2>
+                    <h3 className="course--title">Learn How to Test Programs</h3>
+                </a>       
       <a className="course--module course--add--module" href="index.html">
           <span className="course--add--title">
          
@@ -45,7 +52,9 @@ function Courses() {
 }
 //}
 
-//will delete h2/h3(deleted some html already - info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
+//will delete lines 30-37 (course detail on how to program and how to test programs) )h2/h3(deleted some html already - info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
  //fetch http://localhost:5000/api/courses and so forth - check postman for routes fetching on each component that needs it. Stateless like Header won't need it.
 //check with console.log to see course list and hten do map and jsx
+// fetchData = (useState) => {
+//   fetch ()
 export default Courses;
