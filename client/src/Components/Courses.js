@@ -19,9 +19,20 @@ function Courses() {
      console.log("hello from useEffect");
    }, []); // pass an empty array to run useEffect once
 
+   //this button is going to the /3001 page but I don't see it consistently, it just pops up at random times
+   //render() {
+     return(
+      <button>
+        <input
+          type="sign up"
+          value="Sign Up"
+        />
+        </button>
+);
    console.log(Courses);
    return <h2> Courses </h2>;
 }
+//}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Courses />);
 

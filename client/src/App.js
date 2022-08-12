@@ -57,12 +57,13 @@ function App() {
                        
                     </span>
                 </a>
-             
+       
             </div>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render();
+
 //<button onClick={clicked()}>Sign Up</button>
 // <button type="sign up" className="sign-up.html"></button>
 
