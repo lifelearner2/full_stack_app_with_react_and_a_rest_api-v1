@@ -45,7 +45,7 @@ function Courses() {
 }
 //}
 
-//will delete h2/h3(deleted some html already - info will come from fetching from postman) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
+//will delete h2/h3(deleted some html already - info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
  //fetch http://localhost:5000/api/courses and so forth - check postman for routes fetching on each component that needs it. Stateless like Header won't need it.
 //check with console.log to see course list and hten do map and jsx
 export default Courses;
