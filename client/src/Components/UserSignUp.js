@@ -10,15 +10,6 @@
 //     res.status(201).location("/").end();
 //   }));
 
-//POST route that creates new course, sets location header to URI for new course & returns a 201 code
-// router.post('/courses', authenticateUser, asyncHandler(async(req, res) => {
-//     const course = await Course.create(req.body);
-//     res.status(201).location(`/courses/${course.id}`).end();
-//   }));
-
-
-
-
 
 //may do something similar below for creating a new user
 // submit = () => {
