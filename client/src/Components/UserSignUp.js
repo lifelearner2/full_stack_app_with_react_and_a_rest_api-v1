@@ -3,9 +3,18 @@
 //This component also renders a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 
 
+//POST /api/users route creates a new user account
+//set the Location header to "/", and return a 201 HTTP status code and no content.
+// router.post('/users', asyncHandler(async (req, res) => {
+//     await User.create(req.body);
+//     res.status(201).location("/").end();
+//   }));
 
-
-
+//POST route that creates new course, sets location header to URI for new course & returns a 201 code
+// router.post('/courses', authenticateUser, asyncHandler(async(req, res) => {
+//     const course = await Course.create(req.body);
+//     res.status(201).location(`/courses/${course.id}`).end();
+//   }));
 
 
 
