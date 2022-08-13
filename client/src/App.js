@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
-
+//import axios from 'axios';
 import Header from './Components/Header';
 import Courses from './Components/Courses';
 
@@ -20,7 +20,11 @@ import Courses from './Components/Courses';
 
 function App() {
   const [ courses, setCourses ] = useState(0);
-
+//   useEffect(() => { 
+//     axios(`http://`)
+//       .then(response => setData(response.data.data))
+//       .catch(error => console.log('Error fetching and parsing data', error))
+//   }, []);
   return (
       <>
       <Header />

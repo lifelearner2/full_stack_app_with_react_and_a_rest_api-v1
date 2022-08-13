@@ -2,12 +2,30 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
 //import App from './app.js';
+//import axios from 'axios';
 
 
+//would something like this go in here or course detail or a new Search type component?
+//import React, { useState } from 'react';
+// function SearchForm(props) {
+//   const [searchText, setSearchText] = useState('');
+
+//   const onSearchChange = (e) => {...};
+
+//   return (...);
+// }
 
 function Courses() {  
   const [ courses, setCourses ] = useState(0);
   const [ message ] = useState( 'Welcome to Our Courses!');
+  //const [query, setQuery] = useState('courses'); // declare new state
+  // update the query state
+  //const performSearch = (value) => setQuery(value);
+  // useEffect(() => { 
+  //   axios(`http://localhost:5000/api/courses`)
+  //     .then(response => setCourses(response.courses.courses))
+  //     .catch(error => console.log('Error fetching and parsing data', error))
+  // },  [query]); // add the query dependency
   //  const data = 
   // {setCourses(courses)  {data);} 
    
@@ -19,6 +37,7 @@ function Courses() {
      console.log("hello from useEffect");
    }, []); // pass an empty array to run useEffect once
 
+   //add this after h tag below for each class?    <SearchForm onSearch={performSearch} />
 
    //render() {
      return(
@@ -52,7 +71,7 @@ function Courses() {
 }
 //}
 
-//will delete lines 30-37 (course detail on how to program and how to test programs) )h2/h3(info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
+//will delete lines re: course detail on how to program and how to test programs h2/h3(info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
  //fetch http://localhost:5000/api/courses and so forth - check postman for routes fetching on each component that needs it. Stateless like Header won't need it.
 //check with console.log to see course list and hten do map and jsx
 // fetchData = (useState) => {
