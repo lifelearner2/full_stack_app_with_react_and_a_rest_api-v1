@@ -32,7 +32,8 @@
 //       console.log(`${username} is successfully signed up and authenticated!`);
 //     }
 //       })
-//       cancel = () => {
-    
+// cancel = () => {
+//     this.props.history.push('/'); //redirects to home page upon clicking cancel
 //       };
 //     }
+    
