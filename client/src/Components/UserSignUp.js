@@ -31,9 +31,11 @@
 //     } else {
 //       console.log(`${username} is successfully signed up and authenticated!`);
 //     }
-//       })
+//       });
+//redirects to home page when cancel is selected
+// }
 // cancel = () => {
-//     this.props.history.push('/'); //redirects to home page upon clicking cancel
-//       };
+//   this.props.history.push('/');
+// }
 //     }
     
