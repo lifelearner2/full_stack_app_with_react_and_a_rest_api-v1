@@ -17,4 +17,13 @@ const Header = () => {
   )
 }
 
+//Check if auth is required (btoa is now buffer) - not sure if this goes here
+// if (requiresAuth) {
+//   const encodedCredentials = btoa(`${credentials.username}:${credentials.password}`);
+
+//   options.headers['Authorization'] = `Basic ${encodedCredentials}`;
+// }
+//     return fetch(url, options);
+//   }
+
 export default Header;
