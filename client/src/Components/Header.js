@@ -17,6 +17,19 @@ const Header = () => {
   )
 }
 
+//put this under first nav tag?  
+        //     {authUser ?
+        //     <React.Fragment>
+        //     <span>Welcome, {authUser.name}!</span>
+        //     <Link to="/signout">Sign Out</Link>
+        //   </React.Fragment>
+        //   :
+        //   <React.Fragment>
+        //     <Link className="signup" to="/signup">Sign Up</Link>
+        //     <Link className="signin" to="/signin">Sign In</Link>
+        //   </React.Fragment>
+        // }
+
 //Check if auth is required (btoa is now buffer) - not sure if this goes here
 // if (requiresAuth) {
 //   const encodedCredentials = btoa(`${credentials.username}:${credentials.password}`);
