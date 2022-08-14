@@ -4,7 +4,7 @@
 //This route is: /signout - UserSignOut
 
 //update address
-// export default () => {
+// export default ({ context }) => {  //does context go in here?
 //     return (
 //       <Redirect to="/" />
 //     );

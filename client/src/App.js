@@ -14,6 +14,7 @@ import Courses from './Components/Courses';
 
 // Connect the components to context
 const HeaderWithContext = withContext(Header);
+//const AuthWithContext = withContext(Authenticated);
 const CoursesWithContext = withContext(Courses);
 //const {Header, Courses} = require('./Components');
 
@@ -41,7 +42,7 @@ function App() {
       <HeaderWithContext />
       {/* <Switch>
         <Route exact path="/" component={Public} />
-        <PrivateRoute path="/authenticated" component={Authenticated} />
+        <PrivateRoute path="/authenticated" component={AuthWithContext} />
         <Route path="/signin" component={UserSignInWithContext} />
         <Route path="/signup" component={UserSignUpWithContext} />
         <Route path="/signout" component={UserSignOut} />
