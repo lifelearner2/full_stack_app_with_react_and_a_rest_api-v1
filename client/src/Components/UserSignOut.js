@@ -1,5 +1,5 @@
 //This component signs out the authenticated user and redirects the user to the default route (i.e. the list of courses).
-// import React from 'react';
+// import React, { useEffect } from 'react';
 // import { Redirect } from 'react-router-dom';
 //This route is: /signout - UserSignOut
 
@@ -67,3 +67,13 @@
 //   }
 //       return fetch(url, options);
 //     }
+
+//remove cookies
+// signOut = () => {
+//     this.setState(() => {
+//       return {
+//         authenticatedUser: null,
+//       };
+//     });
+//     Cookies.remove('authenticatedUser');
+//   }
