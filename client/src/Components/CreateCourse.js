@@ -2,6 +2,16 @@
 //The component also renders a "Create Course" button that when clicked sends a POST request to the REST API's /api/courses route. 
 //This component also renders a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 
+//need to update routes here: 
+// 'use strict';
+
+// const express = require('express');
+// const { asyncHandler } = require('./middleware/async-handler'); update route?
+// const { User, Course } = require('./models'); change to just Course or Courses? UPdate route
+// const { authenticateUser } = require('./middleware/auth-user'); UPdate route
+
+// Construct a router instance.
+//const router = express.Router();
 
 
 //POST route that creates new course, sets location header to URI for new course & returns a 201 code

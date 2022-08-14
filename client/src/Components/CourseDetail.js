@@ -7,7 +7,7 @@
 //const express = require('express');
 //const { asyncHandler } = require('./middleware/async-handler');
 //const { Course or Courses } = require('./'); //do I require this from the api folder or client 
-//const { authenticateUser } = require('./middleware/auth-user');
+
 
 // Construct a router instance.
 //const router = express.Router();

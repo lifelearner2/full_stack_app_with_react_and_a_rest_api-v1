@@ -2,7 +2,7 @@
 //The component also renders a "Sign In" button that when clicked signs in the user
 //this component a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 
-
+//const { authenticateUser } = require('./middleware/auth-user'); update route
 
 
 //Do something like this?
