@@ -5,14 +5,19 @@
 // import { Consumer } from './Context';
 
 // export default ({ component: Component, ...rest }) => {
-//   return (
-//     <Consumer>
-//       { context => (
-//         <Route
-//           {...rest}
-//           render={}
-//         />
+//     return (
+//   <Consumer>
+//         {context => (
+//           <Route
+//             {...rest}
+//             render={props => context.authenticatedUser ? (
+//                 <Component {...props} />
+//               ) : (
+//                 <Redirect to='/signin' />
+//               )
+//             }
+//           />
 //       )}
-//     </Consumer>
-//   );
-// };
+//       </Consumer>
+//     );
+//   };
