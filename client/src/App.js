@@ -41,3 +41,13 @@ function App() {
 //not fetching in app.js - only in certain components. App.js is for routes and errors and maybe authentication and validation
 
 export default App;
+
+
+//Note: Your app should include the following routes (listed in the format path - component):
+// / - Courses
+// /courses/create - CreateCourse
+// /courses/:id/update - UpdateCourse
+// /courses/:id - CourseDetail
+// /signin - UserSignIn
+// /signup - UserSignUp
+// /signout - UserSignOut

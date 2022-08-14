@@ -1,6 +1,7 @@
 //This component renders the sign in screen form that allows user to enter existing account info
 //The component also renders a "Sign In" button that when clicked signs in the user
 //this component a "Cancel" button that returns the user to the default route (i.e. the list of courses).
+//this route is: /signin - UserSignIn
 
 //const { authenticateUser } = require('./middleware/auth-user'); update route
 

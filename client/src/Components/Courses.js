@@ -1,6 +1,7 @@
 //This component provides the "Courses" screen by retrieving the list of courses from /api/courses
 //Each course needs to link to its respective "Course Detail" screen. 
 //This component also renders a link to the "Create Course" screen.
+//this address route is:  / - Courses
 
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom/client';
