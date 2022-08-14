@@ -8,6 +8,8 @@
 //     );
 //   }
 
+//redirect address above should likely be: /api/courses for the list of courses
+
 //Check if auth is required (btoa is now buffer)
 // if (requiresAuth) {
 //     const encodedCredentials = btoa(`${credentials.username}:${credentials.password}`);
