@@ -29,7 +29,10 @@
 
 
 //update address
-// export default ({ context }) => {  //does context go in here?
+// export default ({context}) => {
+//     // component calls signOut and updates state after render
+//     useEffect(() =>  context.actions.signOut());
+  
 //     return (
 //       <Redirect to="/" />
 //     );
