@@ -12,6 +12,23 @@
 //const { authenticateUser } = require('./middleware/auth-user'); update route
 
 
+// render() {
+//     const { authenticatedUser } = this.state;
+
+//     const value = {
+//       authenticatedUser,
+//       data: this.data,
+//       actions: { // Add the 'actions' property and object
+//         signIn: this.signIn 
+//       }
+//     };
+//     return (
+//       <Context.Provider value={value}>
+//         {this.props.children}
+//       </Context.Provider>  
+//     );
+//   }
+
 //Once user is authenticated the page will show a welcome message in place of sign up and replace the sign in with sign out 
 // signIn = async (username, password) => {
 //     const user = await this.data.getUser(username, password);
