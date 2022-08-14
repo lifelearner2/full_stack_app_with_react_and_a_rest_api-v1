@@ -1,7 +1,11 @@
 //This component signs out the authenticated user and redirects the user to the default route (i.e. the list of courses).
 
 
-
+// export default () => {
+//     return (
+//       <Redirect to="/" />
+//     );
+//   }
 
 //Check if auth is required (btoa is now buffer)
 // if (requiresAuth) {
