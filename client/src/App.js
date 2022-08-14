@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 //import axios from 'axios';
 import Header from './Components/Header';
 import Courses from './Components/Courses';
+//not sure I need these others
 // import CreateCourse from './Components/CreateCourse';
 // import UpdateCourse from './Components/UpdateCourse';
 // import CourseDetail from './Components/CourseDetail';
@@ -11,6 +12,9 @@ import Courses from './Components/Courses';
 // import UserSignUp from './Components/UserSignUp';
 // import UserSignOut from './Components/UserSignOut';
 
+// Connect the components to context
+const HeaderWithContext = withContext(Header);
+const CoursesWithContext = withContext(Courses);
 //const {Header, Courses} = require('./Components');
 
  import {
@@ -34,8 +38,8 @@ function App() {
 //   }, []);
   return (
       <>
-      <Header />
-       <Courses /> 
+      <HeaderWithContext />
+       <CoursesWithContext /> 
        </>
   
   );
