@@ -17,22 +17,41 @@
 //     return (
 //       <Context.Provider value={value}>
 //         {this.props.children}
-//       </Context.Provider>  
+//       </Context.Provider>
 //     );
 //   }
 
-
+// return (
+//   <Consumer>
+//     {(context) => (
+//       <Route
+//         {...rest}
+//         render={(props) =>
+//           context.authenticatedUser ? (
+//             <Component {...props} />
+//           ) : (
+//             <Redirect
+//               to={{
+//                 pathname: "/signin",
+//                 state: { from: props.location },
+//               }}
+//             />
+//           )
+//         }
+//       />
+//     )}
+//   </Consumer>
+// );
 // Function to sign out a user
 // signOut = () => {
-    //this.setState({ authenticatedUser: null });
+//this.setState({ authenticatedUser: null });
 // }
-
 
 //update address
 // export default ({context}) => {
 //     // component calls signOut and updates state after render
 //     useEffect(() =>  context.actions.signOut());
-  
+
 //     return (
 //       <Redirect to="/" />
 //     );
@@ -43,7 +62,7 @@
 //Check if auth is required (btoa is now buffer)
 // if (requiresAuth) {
 //     const encodedCredentials = btoa(`${credentials.username}:${credentials.password}`);
-  
+
 //     options.headers['Authorization'] = `Basic ${encodedCredentials}`;
 //   }
 //       return fetch(url, options);

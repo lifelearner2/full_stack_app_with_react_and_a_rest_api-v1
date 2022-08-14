@@ -30,7 +30,7 @@
 //   }
 
 //Once user is authenticated the page will show a welcome message in place of sign up and replace the sign in with sign out 
-// signIn = async (username, password) => {
+//    signIn = async (username, password) => {
 //     const user = await this.data.getUser(username, password);
 //     if (user !== null) {
 //       this.setState(() => {
@@ -38,10 +38,11 @@
 //           authenticatedUser: user,
 //         };
 //       });
+//       // Set cookie
+//       Cookies.set('authenticatedUser', JSON.stringify(user), { expires: 1 });
 //     }
 //     return user;
 //   }
-
 //Do something like this?
 // async getUser(username, password) {
 //     const response = await this.api(`/users`, 'GET', null, true, { username, password });
@@ -87,10 +88,12 @@
 //     }
 //   };
 
-
+//If the user is redirected to /signin from a previous route, submit() should navigate them back to the original route once they authenticate.
 // submit = () => {
 //     const { context } = this.props;
+//     const { from } = this.props.location.state || { from: { pathname: '/authenticated' } };
 //     const { username, password } = this.state;
+    
 //     context.actions.signIn(username, password)
 //      .then( user => {
 //        if (user === null) {
@@ -98,7 +101,7 @@
 //            return { errors: [ 'Sign-in was unsuccessful' ] };
 //          })
 //        } else {
-//          this.props.history.push('/authenticated');
+//          this.props.history.push(from);
 //          console.log(`SUCCESS! ${username} is now signed in!`);
 //        }
 //      })
