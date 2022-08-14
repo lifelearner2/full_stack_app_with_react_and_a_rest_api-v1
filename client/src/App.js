@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client';
+// import {
+//   BrowserRouter,
+//   Route,
+//   Switch
+//  } from 'react-dom/client'
 //import { Link } from 'react-router-dom';
 //import axios from 'axios';
 import Header from './Components/Header';
@@ -13,19 +18,15 @@ import Courses from './Components/Courses';
 // import UserSignOut from './Components/UserSignOut';
 
 // Connect the components to context
-const HeaderWithContext = withContext(Header);
+//const HeaderWithContext = withContext(Header);
 //const AuthWithContext = withContext(Authenticated);
-const CoursesWithContext = withContext(Courses);
+//const CoursesWithContext = withContext(Courses);
 //const {Header, Courses} = require('./Components');
 // const UserSignUpWithContext = withContext(UserSignUp);
 // const UserSignInWithContext = withContext(UserSignIn);
 // const UserSignOutWithContext = withContext(UserSignOut);
 
- import {
-  // BrowserRouter,
-//   Route,
-//   Switch
- } from 'react-dom/client'
+
 
 //  render() {
 //   return (
@@ -42,8 +43,8 @@ function App() {
 //   }, []);
   return (
       <>
-      <HeaderWithContext />
-      {/* <Switch>
+      {/* <HeaderWithContext />
+      <Switch>
         <Route exact path="/" component={Public} />
         <PrivateRoute path="/authenticated" component={AuthWithContext} />
         <PrivateRoute path="/settings" component={AuthWithContext} />
@@ -51,8 +52,8 @@ function App() {
         <Route path="/signup" component={UserSignUpWithContext} />
         <Route path="/signout" component={UserSignOutWithContext} />
         <Route component={NotFound} />
-      </Switch> */}
-       <CoursesWithContext /> 
+      </Switch>
+       <CoursesWithContext />  */}
        </>
   
   );
