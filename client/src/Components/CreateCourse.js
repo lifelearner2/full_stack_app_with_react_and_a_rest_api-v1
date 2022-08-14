@@ -2,6 +2,7 @@
 //The component also renders a "Create Course" button that when clicked sends a POST request to the REST API's /api/courses route. 
 //This component also renders a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 //this address route is: /courses/create - CreateCourse
+//screen to display validation errors returned from the REST API.
 
 //need to update routes here: 
 // 'use strict';

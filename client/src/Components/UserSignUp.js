@@ -2,6 +2,7 @@
 //The component also renders a "Sign Up" button that when clicked sends a POST request to the REST API's /api/users route and signs in the user. 
 //This component also renders a "Cancel" button that returns the user to the default route (i.e. the list of courses).
 //This route is: /signup - UserSignUp
+//screen to display validation errors returned from the REST API.
 
 //POST /api/users route creates a new user account
 //set the Location header to "/", and return a 201 HTTP status code and no content.

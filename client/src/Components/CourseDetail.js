@@ -3,6 +3,11 @@
 //This component also renders an "Update Course" button for navigating to the "Update Course" screen.
 //This route is:  /courses/:id - CourseDetail
 
+// On the "Course Detail" screen, add rendering logic so that the "Update Course" and "Delete Course" buttons only display if:
+// There's an authenticated user.
+// And the authenticated user's ID matches that of the user who owns the course.
+
+
 //'use strict';
 //update routes appropriately
 //const express = require('express');
@@ -47,3 +52,5 @@
 //      next();
 //     }
 //   }));
+
+//use the <ReactMarkdown> component to render the course description and materialsNeeded properties as markdown formatted text.

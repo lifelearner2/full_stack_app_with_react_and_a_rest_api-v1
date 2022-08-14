@@ -59,6 +59,9 @@ function App() {
 // /signup - UserSignUp
 // /signout - UserSignOut
 
+// Update the following routes to use the PrivateRoute component:
+// /courses/create
+// /courses/:id/update
 
 //GET courses Route | route that will return all courses including User associated w/each course - along with a 200 HTTP status code.
 // app.get('/courses', asyncHandler(async (req, res) => {
