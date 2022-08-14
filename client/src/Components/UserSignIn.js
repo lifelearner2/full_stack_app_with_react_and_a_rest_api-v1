@@ -11,8 +11,17 @@
 
 //const { authenticateUser } = require('./middleware/auth-user'); update route
 
+
+//Once user is authenticated the page will show a welcome message in place of sign up and replace the sign in with sign out 
 // signIn = async (username, password) => {
 //     const user = await this.data.getUser(username, password);
+//     if (user !== null) {
+//       this.setState(() => {
+//         return {
+//           authenticatedUser: user,
+//         };
+//       });
+//     }
 //     return user;
 //   }
 
