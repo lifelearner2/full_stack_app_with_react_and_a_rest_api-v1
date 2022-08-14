@@ -24,5 +24,5 @@
 //adjust address to go to course detail screen
 //route is:  /courses/:id - CourseDetail
 // cancel = () => {
-//     this.props.history.push("/");
+//     this.props.history.push("/courses/:id");
 //   };

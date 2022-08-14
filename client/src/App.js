@@ -11,6 +11,7 @@ import Courses from './Components/Courses';
 // import UserSignUp from './Components/UserSignUp';
 // import UserSignOut from './Components/UserSignOut';
 
+//const {Header, Courses} = require('./Components');
 
  import {
   // BrowserRouter,
@@ -40,14 +41,10 @@ function App() {
   );
 }
 
-
 //<button onClick={clicked()}>Sign Up</button>
 // <button type="sign up" className="sign-up.html"></button>
 
 //not fetching in app.js - only in certain components. App.js is for routes and errors and maybe authentication and validation
-
-export default App;
-
 
 //Note: Your app should include the following routes (listed in the format path - component):
 // / - Courses
@@ -95,3 +92,4 @@ export default App;
 // }));
 
 
+export default App;
