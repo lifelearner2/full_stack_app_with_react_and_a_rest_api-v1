@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 //import axios from 'axios';
 import Header from './Components/Header';
 import Courses from './Components/Courses';
-//not sure I need these others
+//not sure I need these others - i think i do
 // import CreateCourse from './Components/CreateCourse';
 // import UpdateCourse from './Components/UpdateCourse';
 // import CourseDetail from './Components/CourseDetail';
@@ -17,6 +17,9 @@ const HeaderWithContext = withContext(Header);
 //const AuthWithContext = withContext(Authenticated);
 const CoursesWithContext = withContext(Courses);
 //const {Header, Courses} = require('./Components');
+// const UserSignUpWithContext = withContext(UserSignUp);
+// const UserSignInWithContext = withContext(UserSignIn);
+// const UserSignOutWithContext = withContext(UserSignOut);
 
  import {
   // BrowserRouter,
@@ -45,7 +48,7 @@ function App() {
         <PrivateRoute path="/authenticated" component={AuthWithContext} />
         <Route path="/signin" component={UserSignInWithContext} />
         <Route path="/signup" component={UserSignUpWithContext} />
-        <Route path="/signout" component={UserSignOut} />
+        <Route path="/signout" component={UserSignOutWithContext} />
         <Route component={NotFound} />
       </Switch> */}
        <CoursesWithContext /> 
