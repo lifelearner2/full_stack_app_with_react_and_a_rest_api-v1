@@ -1,34 +1,34 @@
 //App.js is for routes and errors, authentication and validation
 
-//import React, { useState, useEffect, PrivateRoute } from "react";
- //import ReactDOM from 'react-dom/client';
-// import {
-//   BrowserRouter,
-//   Route,
-//   Switch
-//  } from 'react-dom/client'
-//import { Link } from 'react-router-dom';
+import React, { useState, useEffect, PrivateRoute } from "react";
+import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter,
+  Route,
+  Switch
+ } from 'react-dom/client'
+import { Link } from 'react-router-dom';
 //import axios from 'axios';
-//import Header from './Components/Header';
-// import Courses from './Components/Courses';
-// import CreateCourse from './Components/CreateCourse';
-// import UpdateCourse from './Components/UpdateCourse';
-// import CourseDetail from './Components/CourseDetail';
-// import UserSignIn from './Components/UserSignIn';
-// import UserSignUp from './Components/UserSignUp';
-// import UserSignOut from './Components/UserSignOut';
+import Header from './Components/Header';
+import Courses from './Components/Courses';
+import CreateCourse from './Components/CreateCourse';
+import UpdateCourse from './Components/UpdateCourse';
+import CourseDetail from './Components/CourseDetail';
+import UserSignIn from './Components/UserSignIn';
+import UserSignUp from './Components/UserSignUp';
+import UserSignOut from './Components/UserSignOut';
 
 //const withContext = withContext;
 //const Authenticated = Authenticated;
 
 // Connect the components to context
-//const HeaderWithContext = withContext(Header);
-//const AuthWithContext = withContext(Authenticated);
-//const CoursesWithContext = withContext(Courses);
-//const {Header, Courses} = require('./Components');
-//const UserSignUpWithContext = withContext(UserSignUp);
-//const UserSignInWithContext = withContext(UserSignIn);
-//const UserSignOutWithContext = withContext(UserSignOut);
+const HeaderWithContext = withContext(Header);
+const AuthWithContext = withContext(Authenticated);
+const CoursesWithContext = withContext(Courses);
+const {Header, Courses} = require('./Components');
+const UserSignUpWithContext = withContext(UserSignUp);
+const UserSignInWithContext = withContext(UserSignIn);
+const UserSignOutWithContext = withContext(UserSignOut);
 
   // return (
   //   <Courses />
@@ -38,13 +38,13 @@
   //     )
 
 //Move or copy this whole function to courses?
-// function App() {
-//   const [ courses, setCourses ] = useState(0);
-//   useEffect(() => { 
-//     fetch(`http://localhost:5000/api/courses`)
-//       .then(response => setCourses(response.courses.data))
-//       .catch(error => console.log('Error fetching and parsing data', error))
-//   }, []);
+function App() {
+  const [ courses, setCourses ] = useState(0);
+  useEffect(() => { 
+    fetch(`http://localhost:5000/api/courses`)
+      .then(response => setCourses(response.courses.data))
+      .catch(error => console.log('Error fetching and parsing data', error))
+  }, []);
 
   //   <HeaderWithContext />
   //  <PrivateRoute path="/authenticated" component={AuthWithContext} />
@@ -54,23 +54,23 @@
   // <Route path="/signup" component={UserSignUpWithContext} />
   // <Route path="/signout" component={UserSignOutWithContext} />
   
-//   return (
-//       <>
-//       <BrowserRouter>
+  return (
+      <>
+      <BrowserRouter>
     
-//       <Switch>
-//         <Route exact path="/" component={Courses} />
-//         <PrivateRoute path="/courses/create" component={CreateCourse} />
-//         <PrivateRoute path="/courses/:id/update" component={UpdateCourse} />
-//         <Route path="/courses/:id" component={CourseDetail} />
+      <Switch>
+        <Route exact path="/" component={Courses} />
+        <PrivateRoute path="/courses/create" component={CreateCourse} />
+        <PrivateRoute path="/courses/:id/update" component={UpdateCourse} />
+        <Route path="/courses/:id" component={CourseDetail} />
      
-//       </Switch>
+      </Switch>
      
-//       </BrowserRouter>
+      </BrowserRouter>
 
-//        </>
-//   );
-// }
+       </>
+  );
+}
 
 
 
@@ -115,4 +115,4 @@
 // })); */}
 
 
-//export default App;
+export default App;
