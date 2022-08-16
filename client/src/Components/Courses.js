@@ -143,49 +143,5 @@ function Courses() {
     );
     }
 
-//will delete lines re: course detail on how to program and how to test programs h2/h3(info will come from fetching from) and map - line 25//26over like in unit 7 and dynamically generate it - only the a will remain
- //fetch http://localhost:5000/api/courses and so forth - check postman for routes fetching on each component that needs it. Stateless like Header won't need it.
-//check with console.log to see course list and hten do map and jsx
-// fetchData = (useState) => {
-//   fetch ()
-//Do I need something like this?
-// function SearchForm(props) {
-//   const [searchText, setSearchText] = useState('');
-//   const onSearchChange = (e) => setSearchText(e.target.value);
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//    // pass the search text back to the App component
-//     props.onSearch(searchText);
-//     e.currentTarget.reset();
-//   }
-
-//On form submit, the search query state gets updated, which triggers the useEffect() Hook to fetch new data.
-
-//   return (
-//     <form className="search-form" onSubmit={handleSubmit}>
-//       ...
-//     </form>
-//   );
-// }
-//not sure this needs to go in return statement (from workshop)
-// return (
-//   <form className="search-form" onSubmit={handleSubmit}>
-//     <label className="is-hidden" htmlFor="search">Search</label>
-//     <input type="search"
-//       onChange={onSearchChange} // this value will update state
-//       name="search"
-//       placeholder="Search..."
-//     />
-//     <button type="submit" ...>...</button>
-//   </form>
-// );
-
-
-
-
-
-  
-
-
-  export default Courses;
+  export default Courses

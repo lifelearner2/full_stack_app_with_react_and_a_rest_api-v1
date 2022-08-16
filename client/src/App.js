@@ -1,13 +1,13 @@
 //App.js is for routes and errors, authentication and validation
 
 import React, { useState, useEffect, PrivateRoute } from "react";
-import ReactDOM from 'react-dom/client';
+
 import {
   BrowserRouter,
   Route,
   Switch
- } from 'react-dom/client'
-import { Link } from 'react-router-dom';
+ } from 'react-router-dom'
+
 //import axios from 'axios';
 import Header from './Components/Header';
 import Courses from './Components/Courses';
@@ -25,7 +25,7 @@ import UserSignOut from './Components/UserSignOut';
 const HeaderWithContext = withContext(Header);
 const AuthWithContext = withContext(Authenticated);
 const CoursesWithContext = withContext(Courses);
-const {Header, Courses} = require('./Components');
+
 const UserSignUpWithContext = withContext(UserSignUp);
 const UserSignInWithContext = withContext(UserSignIn);
 const UserSignOutWithContext = withContext(UserSignOut);
