@@ -1,5 +1,26 @@
-import React from 'react'
+//import React from 'react'
 //import { Link } from 'react-router-dom';
+
+
+//function Header () {
+//const Header = () => {
+
+//return (
+{/* <header>
+<div className="wrap header--flex">
+
+    <h1 className="header--logo"><a href="index.html">Courses</a></h1>
+    <nav>
+        <ul className="header--Sign Up">
+       
+            <li><a href="sign-up.html">Sign Up</a></li>
+            <li><a href="sign-in.html">Sign In</a></li>
+        </ul>
+    </nav>
+   
+</div>
+</header> */}
+//)
 
 // const Header = () => {
 //   return (
@@ -16,21 +37,6 @@ import React from 'react'
 // </header>
 //   )
 // }
-
-<header>
-<div className="wrap header--flex">
-
-    <h1 className="header--logo"><a href="index.html">Courses</a></h1>
-    <nav>
-        <ul className="header--Sign Up">
-       
-            <li><a href="sign-up.html">Sign Up</a></li>
-            <li><a href="sign-in.html">Sign In</a></li>
-        </ul>
-    </nav>
-   
-</div>
-</header>
 
 //put this under first nav tag?  
         //     {authUser ?
@@ -52,6 +58,6 @@ import React from 'react'
 //   options.headers['Authorization'] = `Basic ${encodedCredentials}`;
 // }
 //     return fetch(url, options);
-//   }
-
-export default Header;
+  // }
+//}
+//export default Header;

@@ -1,7 +1,9 @@
-import React from 'react';
-import Cookies from 'js-cookie';
-import Data from './Data';
-const Context = React.createContext(); 
+// import React from 'react';
+// import Cookies from 'js-cookie';
+// import Data from './Data';
+// const Context = React.createContext(); 
+
+//can leave this file as class
 
 //Converting Class to Functional Components
 // use function instead of class
@@ -16,18 +18,18 @@ const Context = React.createContext();
 // replace componentDidUpdate with useEffect
 
 
-function Provider () {
-  const state = () => {
-    authenticatedUser: null
-  };
+// function Provider () {
+//   const state = () => {
+//     authenticatedUser: null
+//   };
 
   //not sure if we still use this.props.children with functional components
-  return (
-    <Context.Provider value={value}>
-      {this.props.children} 
-    </Context.Provider>  
-  );
-}
+//   return (
+//     <Context.Provider value={value}>
+//       {this.props.children} 
+//     </Context.Provider>  
+//   );
+// }
 
 //change this to functional
 // signIn = async (username, password) => {
@@ -39,42 +41,42 @@ function Provider () {
 //         };
 //       });
 
-const handleUserNameInput = e => {
-  setUsername(e.target.value);
-  return {
-    authenticatedUser: user,
-  }
-};
+// const handleUserNameInput = e => {
+//   setUsername(e.target.value);
+//   return {
+//     authenticatedUser: user,
+//   }
+// };
 
 // Set cookie
-  Cookies.set('authenticatedUser', JSON.stringify(user), { expires: 1 });
+  //Cookies.set('authenticatedUser', JSON.stringify(user), { expires: 1 });
 
 
-return (
-  <div>
-    <h3> Handling User Name Input</h3>
-    <input 
-    type="text"
-    onChange={handleUserNameInput}
-    value={userName}
-    placeholder="Your Username"
-  </div>
-)
+// return (
+//   <div>
+//     <h3> Handling User Name Input</h3>
+//     <input 
+//     type="text"
+//     onChange={handleUserNameInput}
+//     value={userName}
+//     placeholder="Your Username"
+//   </div>
+// )
   
   
  // Function to sign out a user
-  const handleUserSignOut = e => {
-    setUserSignOUt = (e.target.value);
-  }
+  // const handleUserSignOut = e => {
+  //   setUserSignOUt = (e.target.value);
+  // }
 
-export const Consumer = Context.Consumer;
+// export const Consumer = Context.Consumer;
 
-export default function withContext(Component) {
-    return function ContextComponent(props) {
-      return (
-        <Context.Consumer>
-          {context => <Component {...props} context={context} />}
-        </Context.Consumer>
-      );
-    }
-  }
+// export default function withContext(Component) {
+//     return function ContextComponent(props) {
+//       return (
+//         <Context.Consumer>
+//           {context => <Component {...props} context={context} />}
+//         </Context.Consumer>
+//       );
+//     }
+//   }

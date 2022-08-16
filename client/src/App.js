@@ -1,32 +1,34 @@
-import React from "react";
- import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter,
-  Route,
-  Switch
- } from 'react-dom/client'
-import { Link } from 'react-router-dom';
+//App.js is for routes and errors, authentication and validation
+
+//import React, { useState, useEffect, PrivateRoute } from "react";
+ //import ReactDOM from 'react-dom/client';
+// import {
+//   BrowserRouter,
+//   Route,
+//   Switch
+//  } from 'react-dom/client'
+//import { Link } from 'react-router-dom';
 //import axios from 'axios';
-import Header from './Components/Header';
-import Courses from './Components/Courses';
-import CreateCourse from './Components/CreateCourse';
-import UpdateCourse from './Components/UpdateCourse';
-import CourseDetail from './Components/CourseDetail';
-import UserSignIn from './Components/UserSignIn';
-import UserSignUp from './Components/UserSignUp';
-import UserSignOut from './Components/UserSignOut';
+//import Header from './Components/Header';
+// import Courses from './Components/Courses';
+// import CreateCourse from './Components/CreateCourse';
+// import UpdateCourse from './Components/UpdateCourse';
+// import CourseDetail from './Components/CourseDetail';
+// import UserSignIn from './Components/UserSignIn';
+// import UserSignUp from './Components/UserSignUp';
+// import UserSignOut from './Components/UserSignOut';
+
+//const withContext = withContext;
+//const Authenticated = Authenticated;
 
 // Connect the components to context
-const HeaderWithContext = withContext(Header);
-const AuthWithContext = withContext(Authenticated);
-const CoursesWithContext = withContext(Courses);
-const {Header, Courses} = require('./Components');
-const UserSignUpWithContext = withContext(UserSignUp);
-const UserSignInWithContext = withContext(UserSignIn);
-const UserSignOutWithContext = withContext(UserSignOut);
-
-
-
+//const HeaderWithContext = withContext(Header);
+//const AuthWithContext = withContext(Authenticated);
+//const CoursesWithContext = withContext(Courses);
+//const {Header, Courses} = require('./Components');
+//const UserSignUpWithContext = withContext(UserSignUp);
+//const UserSignInWithContext = withContext(UserSignIn);
+//const UserSignOutWithContext = withContext(UserSignOut);
 
   // return (
   //   <Courses />
@@ -35,53 +37,47 @@ const UserSignOutWithContext = withContext(UserSignOut);
   //   <h1> { "hello"}</h1>
   //     )
 
-//Move this whole function to courses?
-function App() {
-  const [ courses, setCourses ] = useState(0);
-  useEffect(() => { 
-    fetch(`http://localhost:5000/api/courses`)
-      .then(response => setData(response.data.data))
-      .catch(error => console.log('Error fetching and parsing data', error))
-  }, []);
+//Move or copy this whole function to courses?
+// function App() {
+//   const [ courses, setCourses ] = useState(0);
+//   useEffect(() => { 
+//     fetch(`http://localhost:5000/api/courses`)
+//       .then(response => setCourses(response.courses.data))
+//       .catch(error => console.log('Error fetching and parsing data', error))
+//   }, []);
+
+  //   <HeaderWithContext />
+  //  <PrivateRoute path="/authenticated" component={AuthWithContext} />
+  //  <PrivateRoute path="/settings" component={AuthWithContext} />
+  //  <CoursesWithContext /> 
+  // <Route path="/signin" component={UserSignInWithContext} />
+  // <Route path="/signup" component={UserSignUpWithContext} />
+  // <Route path="/signout" component={UserSignOutWithContext} />
   
-  return (
-      <>
-      <BrowserRouter>
-      <HeaderWithContext />
-      <Switch>
-        <Route exact path="/" component={Courses} />
-        <PrivateRoute path="/courses/create" component={CreateCourse} />
-        <PrivateRoute path="/courses/:id/update" component={UpdateCourse} />
-        <Route path="/courses/:id" component={CourseDetail} />
-        <PrivateRoute path="/authenticated" component={AuthWithContext} />
-        <PrivateRoute path="/settings" component={AuthWithContext} />
-        <Route path="/signin" component={UserSignInWithContext} />
-        <Route path="/signup" component={UserSignUpWithContext} />
-        <Route path="/signout" component={UserSignOutWithContext} />
-        <Route component={NotFound} />
-      </Switch>
-       <CoursesWithContext /> 
-      </BrowserRouter>
+//   return (
+//       <>
+//       <BrowserRouter>
+    
+//       <Switch>
+//         <Route exact path="/" component={Courses} />
+//         <PrivateRoute path="/courses/create" component={CreateCourse} />
+//         <PrivateRoute path="/courses/:id/update" component={UpdateCourse} />
+//         <Route path="/courses/:id" component={CourseDetail} />
+     
+//       </Switch>
+     
+//       </BrowserRouter>
 
-       </>
-  );
-}
+//        </>
+//   );
+// }
 
 
-{/* //not fetching in app.js - only in certain components. App.js is for routes and errors and maybe authentication and validation
 
-//Note: Your app should include the following routes (listed in the format path - component):
-// / - Courses
-// /courses/create - CreateCourse
-// /courses/:id/update - UpdateCourse
-// /courses/:id - CourseDetail
-// /signin - UserSignIn
-// /signup - UserSignUp
-// /signout - UserSignOut
 
-// Update the following routes to use the PrivateRoute component:
-// /courses/create
-// /courses/:id/update
+{/* //not fetching in app.js - only in certain components. 
+
+
 
 //GET courses Route | route that will return all courses including User associated w/each course - along with a 200 HTTP status code.
 // app.get('/courses', asyncHandler(async (req, res) => { */}
@@ -119,4 +115,4 @@ function App() {
 // })); */}
 
 
-export default App;
+//export default App;
