@@ -1,56 +1,71 @@
-//This component provides the "Course Detail" screen by retrieving the detail for a course from the REST API's /api/courses/:id route & rendering the course.
-//This component also renders a "Delete Course" button that when clicked should send a DELETE request to the REST API's /api/courses/:id route in order to delete a course.
-//This component also renders an "Update Course" button for navigating to the "Update Course" screen.
-//This route is:  /courses/:id - CourseDetail
+//This stateful component provides the Course Detail screen by retrieving the /api/courses/:id route
+import { useState, useEffect } from "react";
+import { Link, useParams, useHistory } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
-// On the "Course Detail" screen, add rendering logic so that the "Update Course" and "Delete Course" buttons only display if:
-// There's an authenticated user.
-// And the authenticated user's ID matches that of the user who owns the course.
+const CourseDetail = ({context}) => {
+  const [course, setCourse] = useState([]);
+  const { id } = useParams();
+  const history = useHistory();
+  const authUser = context.authenticatedUser;
 
+  useEffect(() => {
+    context.data.getCourse(id)
+    .then(data => setCourse(data))
+    .catch(err => console.log(err));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-//'use strict';
-//update routes appropriately
-//const express = require('express');
-//const { asyncHandler } = require('./middleware/async-handler');
-//const { Course or Courses } = require('./'); //do I require this from the api folder or client 
-
-
-// Construct a router instance.
-//const router = express.Router();
-
-
-//GET courses Route | route that will return all courses including User associated w/each course - along with a 200 HTTP status code.
-// router.get('/courses', asyncHandler(async (req, res) => {
-//     let courses = await Course.findAll({
-//       include: {model: User}
-//     });
-//     res.json(courses);
-//   }));
-
-
-//DELETE route that deletes corresponding course if the user owns it and returns a 204 code
-// router.delete('/courses/:id', authenticateUser, asyncHandler(async(req, res, next) => {
-//     const course = await Course.findByPk(req.params.id);
-//     const user = await req.currentUser;
-//     if (course.userId === user.id) {
-//       await course.destroy();
-//       res.status(204).end();
-//     } else {
-//       next();
-//     }
-//   }));
-
-
-//PUT route that updates corresponding course if the user owns it and returns a 204 code
-// router.put('/courses/:id', authenticateUser, asyncHandler(async(req, res, next) => {
-//     const course = await Course.findByPk(req.params.id);
-//     const user = await req.currentUser;
-//     if (course.userId === user.id) {
-//       await course.update(req.body);
-//       res.status(204).end();
-//     } else {
-//      next();
-//     }
-//   }));
-
-//use the <ReactMarkdown> component to render the course description and materialsNeeded properties as markdown formatted text.
+  const handleDelete = async() => {
+    await context.data.deleteCourse(
+      id,
+      authUser.emailAddress,
+      authUser.password
+    );
+    history.push("/");
+  }
+//Conditional rendering of the Update and Delete Course buttons based on if the user owns the course or not
+  return (
+    <main>
+      <div className="actions--bar">
+        <div className="wrap">
+        {authUser && authUser.id === course.userId ? (
+          <>
+            <Link className="button" to={`/courses/${id}/update`}>Update Course</Link>
+            <button className="button" onClick={handleDelete}>Delete Course</button>
+          </>
+          ) : null }
+            <Link className="button button-secondary" to="/">Return to List</Link>
+        </div>
+      </div>
+            
+      <div className="wrap">
+        <h2>Course Detail</h2>
+        <form>
+          <div className="main--flex">
+            <div>
+              <h3 className="course--detail--title">Course</h3>
+              <h4 className="course--name">{`${course.title}`}</h4>
+              <p>{`By ${course.User?.firstName} ${course.User?.lastName}`}</p>
+              <ReactMarkdown>{`${course.description}`}</ReactMarkdown>
+            </div>
+            <div>
+              <h3 className="course--detail--title">Estimated Time</h3>
+              {course.estimatedTime ? 
+                <p>{`${course.estimatedTime}`}</p> : <p>N/A</p>
+              }
+              <h3 className="course--detail--title">Materials Needed</h3>
+              {course.materialsNeeded ?
+              <ul className="course--detail--list">
+                <ReactMarkdown>{`${course.materialsNeeded}`}</ReactMarkdown>
+              </ul>
+              : <p>N/A</p>
+              }
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  )
+}
+export default CourseDetail

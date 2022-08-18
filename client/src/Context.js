@@ -1,82 +1,70 @@
-// import React from 'react';
-// import Cookies from 'js-cookie';
-// import Data from './Data';
-// const Context = React.createContext(); 
+import React, { Component } from 'react';
+import Data from './Data';
 
-//can leave this file as class
+const Context = React.createContext(); 
 
-//Converting Class to Functional Components
-// use function instead of class
-// remove the constructor
-// remove the render() method, keep the return
-// add const before all methods
-// remove this.state throughout the component
-// remove all references to ‘this’ throughout the component
-// Set initial state with useState()
-// change this.setState() … instead, call the function that you named in the previous step to update the state…
-// replace componentDidMount with useEffect
-// replace componentDidUpdate with useEffect
+export class Provider extends Component {
 
+  constructor() {
+    super();
+    this.data = new Data();
+    
+    this.state = {
+      authenticatedUser: null
+    };
+  }
 
-// function Provider () {
-//   const state = () => {
-//     authenticatedUser: null
-//   };
+  render() {
+    const { authenticatedUser } = this.state;
+    const value = {
+      authenticatedUser,
+      data: this.data,
+      actions: {
+        signIn: this.signIn,
+        signOut: this.signOut
+      },
+    };
+    return (
+      <Context.Provider value={value}>
+        {this.props.children}
+      </Context.Provider>  
+    );
+  }
 
-  //not sure if we still use this.props.children with functional components
-//   return (
-//     <Context.Provider value={value}>
-//       {this.props.children} 
-//     </Context.Provider>  
-//   );
-// }
-
-//change this to functional
-// signIn = async (username, password) => {
-//     const user = await this.data.getUser(username, password);
-//     if (user !== null) {
-//       this.setState(() => {
-//         return {
-//           authenticatedUser: user,
-//         };
-//       });
-
-// const handleUserNameInput = e => {
-//   setUsername(e.target.value);
-//   return {
-//     authenticatedUser: user,
-//   }
-// };
-
-// Set cookie
-  //Cookies.set('authenticatedUser', JSON.stringify(user), { expires: 1 });
-
-
-// return (
-//   <div>
-//     <h3> Handling User Name Input</h3>
-//     <input 
-//     type="text"
-//     onChange={handleUserNameInput}
-//     value={userName}
-//     placeholder="Your Username"
-//   </div>
-// )
   
-  
- // Function to sign out a user
-  // const handleUserSignOut = e => {
-  //   setUserSignOUt = (e.target.value);
-  // }
+  signIn = async (username, password) => {
+    const user = await this.data.getUser(username, password);
+    const plainText = password;
+    if (user !== null) {
+      user.user.password = plainText;
+      this.setState(() => {
+        return {
+          authenticatedUser: user.user,
+        };
+      });
+    }
+    return user;
+  }
 
-// export const Consumer = Context.Consumer;
+  signOut = () => {
+    this.setState({ authenticatedUser: null });
+  }
+}
 
-// export default function withContext(Component) {
-//     return function ContextComponent(props) {
-//       return (
-//         <Context.Consumer>
-//           {context => <Component {...props} context={context} />}
-//         </Context.Consumer>
-//       );
-//     }
-//   }
+export const Consumer = Context.Consumer;
+
+/**
+ * A higher-order component that wraps the provided component in a Context Consumer component.
+ * @param {class} Component - A React component.
+ * @returns {function} A higher-order component.
+ */
+
+export default function withContext(Component) {
+  return function ContextComponent(props) {
+    return (
+      <Context.Consumer>
+        {context => <Component {...props} context={context} />}
+      </Context.Consumer>
+    );
+  }
+}
